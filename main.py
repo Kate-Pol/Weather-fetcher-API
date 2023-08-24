@@ -41,10 +41,13 @@ def display_city(city):
 	city_label.pack(side='top')
 
 def display_weather(weather):
-	pass
+	weath = Label(root, text=f"Weather {weather}")
+	temp = Label(root, text=f'Temperature: {temperature} celsius' )
+
 
 
 display_city(city)
+display_weather(city)
 mainloop()
     
     
