@@ -20,8 +20,8 @@ if response.status_code == 200:
     print('Weather: ', weather)
     print('Temperature: ', temperature, 'celsius') 
     print('Humidity: ', humidity)
-    print('Sunrize time is: ', sunrise_time)
-    print('Sunset time is: ', sunset_time)
-    print('Wind speed: ', wind_speed)
+    print('Sunrize time is: ', sunrise_time, 'local time')
+    print('Sunset time is: ', sunset_time, 'local time')
+    print('Wind speed: ', wind_speed, 'm/s')
 else:
     print('An erroe occurred.')
