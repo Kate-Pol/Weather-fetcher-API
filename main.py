@@ -1,6 +1,9 @@
 import requests
 import key
 import datetime as dt
+from tkinter import *
+import math
+
 
 
 city = input('Enter city name: ')
@@ -25,3 +28,23 @@ if response.status_code == 200:
     print('Wind speed: ', wind_speed, 'm/s')
 else:
     print('An erroe occurred.')
+    
+    
+    
+root = Tk()
+root.geometry('300x300')
+root.title(f'{city} Weather')
+
+def display_city(city):
+	city_label = Label(root, text = f'{city}')
+	city_label.config(font=('Consolas', 28))
+	city_label.pack(side='top')
+
+def display_weather(weather):
+	pass
+
+
+display_city(city)
+mainloop()
+    
+    
