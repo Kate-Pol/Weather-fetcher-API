@@ -46,7 +46,8 @@ def display_weather(weather):
 	humid = Label(root, text=f'Humidity: {humidity}' )
 	sunrise = Label(root, text=f'Sunrise time: {sunrise_time}')
 	sunset = Label(root, text=f'Sunset time: {sunset_time}')
-
+	wind = Label(root, text=f'Wind speed: {wind_speed}')
+	
 
 
 display_city(city)
