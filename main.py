@@ -40,7 +40,7 @@ def display_city(city):
 	city_label.config(font=('Consolas', 28))
 	city_label.pack(side='top')
 
-def display_weather(weather):
+def display_weather(city):
 	weath = Label(root, text=f"Weather {weather}")
 	temp = Label(root, text=f'Temperature: {temperature} celsius' )
 
