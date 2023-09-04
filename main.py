@@ -32,7 +32,7 @@ else:
     
     
 root = Tk()
-root.geometry('300x300')
+root.geometry('500x400')
 root.title(f'{city} Weather')
 
 
@@ -41,20 +41,34 @@ def display_city(city):
 	city_label.config(font=('Consolas', 28))
 	city_label.pack(side='top')
 
-def display_weather(weather):
-	weath = Label(root, text=f"Weather {weather}")
+def display_weather():
+	weath = Label(root, text=f"Weather: {weather}")
 	weath.config(font=('Consolas', 15))
 	weath.pack(side='top')
-	temp = Label(root, text=f'Temperature: {temperature} celsius' )
-	humid = Label(root, text=f'Humidity: {humidity}' )
-	sunrise = Label(root, text=f'Sunrise time: {sunrise_time}')
-	sunset = Label(root, text=f'Sunset time: {sunset_time}')
-	wind = Label(root, text=f'Wind speed: {wind_speed}')
 	
+	temp = Label(root, text=f'Temperature: {temperature} celsius' )
+	temp.config(font=('Consolas', 15))
+	temp.pack(side='top')
+	
+	humid = Label(root, text=f'Humidity: {humidity}' )
+	humid.config(font=('Consolas', 15))
+	humid.pack(side='top')
+	
+	sunrise = Label(root, text=f'Sunrise time: {sunrise_time}')
+	sunrise.config(font=('Consolas', 15))
+	sunrise.pack(side='top')
+	
+	sunset = Label(root, text=f'Sunset time: {sunset_time}')
+	sunset.config(font=('Consolas', 15))
+	sunset.pack(side='top')
+	
+	wind = Label(root, text=f'Wind speed: {wind_speed}')
+	wind.config(font=('Consolas', 15))
+	wind.pack(side='top')
 
 
 display_city(city)
-display_weather(weather)
+display_weather()
 root.mainloop()
     
     
