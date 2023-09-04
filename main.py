@@ -12,7 +12,7 @@ response = requests.get(request_url)
 
 if response.status_code == 200:
     data = response.json()
-    #print(data)
+    
     weather = data['weather'][0]['description']
     temperature = round(data['main']['temp'] - 273.15, 2)
     humidity = data['main']['humidity']
@@ -35,16 +35,16 @@ root = Tk()
 root.geometry('300x300')
 root.title(f'{city} Weather')
 
-frame = ttk.Frame(root)
-fr.grid()
 
 def display_city(city):
 	city_label = Label(root, text = f'{city}')
 	city_label.config(font=('Consolas', 28))
 	city_label.pack(side='top')
 
-def display_weather(city):
+def display_weather(weather):
 	weath = Label(root, text=f"Weather {weather}")
+	weath.config(font=('Consolas', 15))
+	weath.pack(side='top')
 	temp = Label(root, text=f'Temperature: {temperature} celsius' )
 	humid = Label(root, text=f'Humidity: {humidity}' )
 	sunrise = Label(root, text=f'Sunrise time: {sunrise_time}')
@@ -54,7 +54,7 @@ def display_weather(city):
 
 
 display_city(city)
-display_weather(city)
+display_weather(weather)
 root.mainloop()
     
     
