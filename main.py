@@ -35,6 +35,9 @@ root = Tk()
 root.geometry('300x300')
 root.title(f'{city} Weather')
 
+frame = ttk.Frame(root)
+fr.grid()
+
 def display_city(city):
 	city_label = Label(root, text = f'{city}')
 	city_label.config(font=('Consolas', 28))
@@ -43,11 +46,15 @@ def display_city(city):
 def display_weather(city):
 	weath = Label(root, text=f"Weather {weather}")
 	temp = Label(root, text=f'Temperature: {temperature} celsius' )
-
+	humid = Label(root, text=f'Humidity: {humidity}' )
+	sunrise = Label(root, text=f'Sunrise time: {sunrise_time}')
+	sunset = Label(root, text=f'Sunset time: {sunset_time}')
+	wind = Label(root, text=f'Wind speed: {wind_speed}')
+	
 
 
 display_city(city)
 display_weather(city)
-mainloop()
+root.mainloop()
     
     
