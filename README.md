@@ -24,3 +24,7 @@ This package is supported from Python 3.8 or later. See '''requirements.txt''' f
 - Sunrize time
 - Sunset time
 - Wind speed
+
+### How the API looks like from hte side: 
+
+![](https://github.com/Kate-Pol/Weather-fetcher-API/blob/main/png/cmd%201.PNG)
